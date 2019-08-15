@@ -1,0 +1,79 @@
+// Partials
+@import 'reset';
+@import 'variables';
+@import 'nav';
+@import 'burger';
+@import 'mixins';
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $color2;
+}
+
+h1{
+  font-family: monospace;
+  color: $color3;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+.imgDiv{
+  width: 80%;
+  margin: auto;
+}
+
+.logoImg{
+  width: 550px;
+  display: block;
+  margin: auto;
+  // border: 3px solid tomato;
+}
+
+.para{
+  width: 40%;
+  margin: 100px 5%;
+  float: left;
+
+}
+
+.para::after{
+  clear: left;
+}
+
+.paraStyle{
+
+  color: $color4;
+  font-family: geneva;
+}
+
+
+.list{
+  @extend .para, .paraStyle;
+  ul{
+    li{
+      margin: 20px;
+      list-style: circle;
+    }
+  }
+}
+
+button{
+  @include btn(monospace, 1em, 100px, 30px, 10px, $color3);
+  margin-left: 20px;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+button:active{
+  background-color: $color4;
+}
